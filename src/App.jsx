@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import { Post } from './components/Post'
 import { Header } from './components/Header';
 import { Sidebar } from './components/Sidebar';
@@ -5,6 +6,41 @@ import { Sidebar } from './components/Sidebar';
 import styles from './App.module.css';
 
 import './global.css';
+
+const posts = [
+  
+  {
+    id: 1,
+    author: {
+      avatarUrl: 'https://github.com/albertymacedo.png',
+      name: 'Alberty Macedo',
+      role: 'Developer'
+    },
+    content: [
+      {type: 'paragraph', content: 'Fala galeraa 👋'},
+      {type: 'paragraph', content:'Acabei de subir mais um projeto no meu portifolio. É um projeto que fiz no React, evento da Rocketseat. O nome do projeto é MeuPost 🚀'},
+      {type: 'link', content: 'alberty.macedo/react'},
+
+    ],
+    publishedAt: new Date('2023-08-01 12:59:00'),
+  },
+  {
+    id: 2,
+    author: {
+      avatarUrl: 'https://github.com/goltaraya.png',
+      name: 'Yago Alexandre',
+      role: 'Devops'
+    },
+    content: [
+      {type: 'paragraph', content: 'Fala galeraa 👋'},
+      {type: 'paragraph', content:'Acabei de subir mais um projeto no meu portifolio. É um projeto que fiz no React, evento da Rocketseat. O nome do projeto é MeuPost 🚀'},
+      {type: 'link', content: 'alberty.macedo/react'},
+
+    ],
+    publishedAt: new Date('2023-08-02 12:59:00'),
+  },
+];
+
 export function App() {
   return (
     <div>
@@ -13,14 +49,15 @@ export function App() {
       <div className={styles.wrapper}>
         <Sidebar />
         <main>
-        <Post
-        author= "Alberty Macedo"
-        content= "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, minima libero commodi cum nemo sit veniam voluptate fugiat soluta maxime nihil culpa ipsa. Libero quae, dolores aspernatur voluptatum id neque?" 
-      />
-      <Post
-              author= "Pessoa Aleatória"
-              content= "Hoje foi um dia produtivo!" 
-            />
+          {posts.map(post => {
+            return (
+               <Post 
+               author = {post.author}
+               content = {post.content}
+               publishedAt = {post.published}
+               />
+               )
+          })}
         </main>
       </div>
     </div>
