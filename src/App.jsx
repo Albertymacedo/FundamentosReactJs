@@ -22,7 +22,7 @@ const posts = [
       {type: 'link', content: 'alberty.macedo/react'},
 
     ],
-    publishedAt: new Date('2023-08-01 12:59:00'),
+    publishedAt: new Date('2023-05-03 20:00:00')
   },
   {
     id: 2,
@@ -37,7 +37,7 @@ const posts = [
       {type: 'link', content: 'alberty.macedo/react'},
 
     ],
-    publishedAt: new Date('2023-08-02 12:59:00'),
+    publishedAt: new Date('2023-05-03 20:00:00')
   },
 ];
 
