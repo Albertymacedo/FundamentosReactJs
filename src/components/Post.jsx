@@ -32,6 +32,8 @@ export function Post({ author, publishedAt, content  }) {
 
   }
 
+  console.log('teste');
+
   return (
     <article className={styles.post}>
       <header>
