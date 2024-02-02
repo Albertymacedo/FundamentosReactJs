@@ -14,7 +14,7 @@ const posts = [
     author: {
       avatarUrl: 'https://github.com/albertymacedo.png',
       name: 'Alberty Macedo',
-      role: 'Developer'
+      role: 'Full stack Developer'
     },
     content: [
       {type: 'paragraph', content: 'Fala galeraa 👋'},
@@ -27,9 +27,9 @@ const posts = [
   {
     id: 2,
     author: {
-      avatarUrl: 'https://github.com/goltaraya.png',
-      name: 'Yago Alexandre',
-      role: 'Devops'
+      avatarUrl: 'https://github.com/albertymacedo.png',
+      name: 'Alberty Macedo',
+      role: 'Full stack Developer'
     },
     content: [
       {type: 'paragraph', content: 'Fala galeraa 👋'},
